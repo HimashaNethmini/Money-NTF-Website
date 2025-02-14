@@ -1,7 +1,7 @@
 import "./globals.css";
 import { Inria_Sans } from "next/font/google";
 import type { Metadata } from "next";
-import { relative } from "path";
+import Header from "./_components/header/header";
 
 const inriaSans = Inria_Sans({
   variable: "--font-inria-sans",
@@ -22,6 +22,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inriaSans.variable} relative mx-auto box-border max-w-[1728px] px-[17px] py-[10px] antialiased`}>
+        
+        <Header />
         {children}
       </body>
     </html>
