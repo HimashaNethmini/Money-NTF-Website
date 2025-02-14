@@ -7,3 +7,8 @@
   --foreground: #17161b;
 }
 
+body {
+  font-family: var(--font-inria-sans), Georgia, 'Times New Roman', Times, serif ;
+  color: var(--foreground);
+  background: var(--background);
+}
