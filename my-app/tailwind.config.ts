@@ -11,7 +11,7 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        primary: "FF703E",
+        primary: "#FF703E",
       },
       fontSize: {
         '10': '10px',
