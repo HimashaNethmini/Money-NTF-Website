@@ -1,11 +1,12 @@
 import Logo from './logo'
+import MenuIcon from './menuIcon'
 
 const Header = () => {
   return (
     <header>
         <div className="flex justify-between items-center">
             <Logo />
-            <span>Menu icon</span>
+            <MenuIcon />
         </div>
 
     </header>
