@@ -9,6 +9,6 @@
 
 body {
   font-family: var(--font-inria-sans), Georgia, 'Times New Roman', Times, serif ;
-  color: var(--foreground);
-  background: var(--background);
+  color: var(--background);
+  background: var(--foreground);
 }
