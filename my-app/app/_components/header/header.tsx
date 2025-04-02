@@ -42,7 +42,7 @@ const Header = () => {
       </div>
 
       {/* sidebar */}
-      <Sidebar/>
+      <Sidebar isOpen = {isOpen} setIsOpen={setIsOpen} />
     </header>
   );
 };
