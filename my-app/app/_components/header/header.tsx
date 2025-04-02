@@ -3,12 +3,13 @@ import Link from "next/link";
 import Logo from "./logo";
 import MenuIcon from "./menuIcon";
 import React, { useState } from "react";
+import Sidebar from "./sidebar";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <header>
-      <div className="flex justify-between items-center">
+      <div className="flex justify-between items-center py-[7px]">
         <Logo />
 
         {/* menu icon hidden for large screens  */}
@@ -38,8 +39,10 @@ const Header = () => {
         <button className="bg-primary hidden lg:block text-white px-[20px] py-[7px] rounded-full">
           Connect Wallet
         </button>
-
       </div>
+
+      {/* sidebar */}
+      <Sidebar/>
     </header>
   );
 };
