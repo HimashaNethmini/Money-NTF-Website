@@ -24,6 +24,21 @@ const HeroSection = () => {
 
           <span>Collect</span>
         </div>
+
+        {/* second line */}
+        <div className="flex items-center gap-[15px]">
+        <HeroFrame
+            height={{ base: 34, lg: 68 }}
+            width={{ base: 123, lg: 251 }}
+            bgImage="/images/hero-frame-2.jpg"
+            animationType="move"
+            />
+
+            <span> & Sell Extraordinary </span>
+        </div>
+
+        {/* third line */}
+        <span>Rare NTFs</span>
       </div>
     </div>
   );
