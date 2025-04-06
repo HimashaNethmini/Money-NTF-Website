@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import styles from "./hero-section.module.css";
+import styles from "../hero-section/hero.frame.module.css"
 
 //define animations
 const animations = {
