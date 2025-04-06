@@ -24,7 +24,7 @@ const HeroMovingFrame = () => {
   const getPosition = (index: number) => {
     const positions = {
       left: { x: -50, opacity: 0.65, scale: 0.8 },
-      center: { x: 0, opacity: 1, zIndex:20, scale: 1 },
+      center: { x: 0, opacity: 1, zIndex: 20, scale: 1 },
       right: { x: 50, opacity: 0.65, scale: 0.8 },
     };
 
@@ -42,6 +42,16 @@ const HeroMovingFrame = () => {
           className="absolute h-[200px] w-[102px] overflow-hidden rounded-[80px] bg-[#CDCDCD]"
           initial={false}
           animate={getPosition(index)}
+          transition={{
+            x: {
+              duration: 0.8,
+              ease: "easeInOut",
+            },
+            opacity: {
+              duration: 0.3,
+              ease: "easeInOut",
+            },
+          }}
         >
           <Image
             src={frame.src}
