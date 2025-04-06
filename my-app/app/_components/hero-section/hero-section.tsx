@@ -47,8 +47,10 @@ const HeroSection = () => {
         <HeroMovingFrame />
         </div>
 
-        <div>
-          <span>Stats</span>
+        <div className="flex justify-around text-25 font-extrabold gap-[30px]">
+          <span>500 +</span>
+          <span>50 +</span>
+          <span>1000</span>
         </div>
 
       </div>
