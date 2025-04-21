@@ -1,6 +1,7 @@
 import React from "react";
 import HeroFrame from "./hero-frame";
 import HeroMovingFrame from "./hero-move";
+import Stats from "./stats";
 
 const HeroSection = () => {
   return (
@@ -47,10 +48,8 @@ const HeroSection = () => {
         <HeroMovingFrame />
         </div>
 
-        <div className="flex justify-around text-25 font-extrabold gap-[30px]">
-          <span>500 +</span>
-          <span>50 +</span>
-          <span>1000</span>
+        <div>
+          <Stats />
         </div>
 
       </div>
