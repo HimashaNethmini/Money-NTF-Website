@@ -21,21 +21,21 @@ const HeroSection = () => {
             height={{ base: 34, lg: 68 }}
             width={{ base: 123, lg: 326 }}
             bgImage="/images/hero-frame-1.jpg"
-            />
+          />
 
           <span>Collect</span>
         </div>
 
         {/* second line */}
         <div className="flex items-center gap-[15px]">
-        <HeroFrame
+          <HeroFrame
             height={{ base: 34, lg: 68 }}
             width={{ base: 123, lg: 251 }}
             bgImage="/images/hero-frame-2.png"
             animationType="move"
-            />
+          />
 
-            <span> & Sell Extraordinary </span>
+          <span> & Sell Extraordinary </span>
         </div>
 
         {/* third line */}
@@ -45,13 +45,20 @@ const HeroSection = () => {
       {/* frame rotation */}
       <div className="flex flex-col items-center justify-center gap-[25px]">
         <div>
-        <HeroMovingFrame />
+          <HeroMovingFrame />
         </div>
 
         <div>
           <Stats />
         </div>
 
+        {/* small information */}
+        <span className="flex justify-center items-center text-center text-[7px] leading-3 w-[202px]">
+          It is a long established fact that a reader will be distracted by the
+          readable content of a page when looking at its layout. The point of
+          using Lorem Ipsum is that it has a more-or-less normal distribution of
+          letters, as opposed to using 'Content here'.
+        </span>
       </div>
     </div>
   );
