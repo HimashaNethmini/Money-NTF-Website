@@ -11,8 +11,8 @@ const HeroSection = () => {
         Money NTF is a platform that allows you to create and Sell.
       </div>
 
-      {/* hero title */}
-      <div className="text-25 flex flex-col items-center justify-center gap-[14px] font-bold py-[15px]">
+      {/* hero title - make responsive for large screen (lg:text - refer tailwind.config.ts) */}
+      <div className="text-25 lg:text-60 flex flex-col items-center justify-center gap-[14px] font-bold py-[15px] lg:py-[25px]">
         {/* first line */}
         <div className="flex items-center gap-[15px]">
           <span>Discover</span>
@@ -43,17 +43,19 @@ const HeroSection = () => {
       </div>
 
       {/* frame rotation */}
-      <div className="flex flex-col items-center justify-center gap-[25px]">
-        <div>
+      <div className="flex flex-col items-center justify-center gap-[25px] lg:flex-row lg:items-start lg:justify-between">
+        <div className="lg:order-2">
           <HeroMovingFrame />
         </div>
 
-        <div>
+        <div className="lg:order-3">
           <Stats />
         </div>
 
         {/* small information */}
-        <span className="flex justify-center items-center text-center text-[7px] leading-3 w-[202px]">
+        <span 
+          className="flex justify-center items-center text-center text-[10px] leading-3 w-[202px]
+          lg:order-1 lg:text-start lg:leading-6 lg:text-14">
           It is a long established fact that a reader will be distracted by the
           readable content of a page when looking at its layout. The point of
           using Lorem Ipsum is that it has a more-or-less normal distribution of

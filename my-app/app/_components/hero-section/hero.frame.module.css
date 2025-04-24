@@ -4,3 +4,11 @@
     background-position: center;
     background-repeat: no-repeat;
 }
+
+@media (min-width: 1024px) {
+    .frame {
+        width: var(--lg-width) !important;
+        height: var(--lg-height) !important;
+    }
+    
+}

@@ -35,11 +35,15 @@ const HeroMovingFrame = () => {
   };
 
   return (
-    <div className="relative flex h-[200px] items-center justify-center">
+    <div
+      className="relative flex h-[200px] items-center justify-center
+      lg:h-[300px]"
+    >
       {frames.map((frame, index) => (
         <motion.div
           key={index}
-          className="absolute h-[200px] w-[102px] overflow-hidden rounded-[80px] bg-[#CDCDCD]"
+          className="absolute h-[200px] w-[102px] overflow-hidden rounded-[80px] bg-[#CDCDCD]
+          lg:W-[102px] lg:rounded-[50px] lg:h-[300px] "
           initial={false}
           animate={getPosition(index)}
           transition={{
