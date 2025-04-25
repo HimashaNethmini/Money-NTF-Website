@@ -2,6 +2,7 @@ import React from "react";
 import HeroFrame from "./hero-frame";
 import HeroMovingFrame from "./hero-move";
 import Stats from "./stats";
+import TextAnimation from "../text-animation";
 
 const HeroSection = () => {
   return (
@@ -15,7 +16,7 @@ const HeroSection = () => {
       <div className="text-25 lg:text-60 flex flex-col items-center justify-center gap-[14px] font-bold py-[15px] lg:py-[25px]">
         {/* first line */}
         <div className="flex items-center gap-[15px]">
-          <span>Discover</span>
+          <TextAnimation delay={0.8}>Discover</TextAnimation>
 
           <HeroFrame
             height={{ base: 34, lg: 68 }}
@@ -23,7 +24,7 @@ const HeroSection = () => {
             bgImage="/images/hero-frame-1.jpg"
           />
 
-          <span>Collect</span>
+          <TextAnimation delay={0.8}>Collect</TextAnimation>
         </div>
 
         {/* second line */}
@@ -35,11 +36,11 @@ const HeroSection = () => {
             animationType="move"
           />
 
-          <span> & Sell Extraordinary </span>
+          <TextAnimation delay={1.1}> & Sell Extraordinary </TextAnimation>
         </div>
 
         {/* third line */}
-        <span>Rare NTFs</span>
+        <TextAnimation delay={1.1}>Rare NTFs</TextAnimation>
       </div>
 
       {/* frame rotation */}
