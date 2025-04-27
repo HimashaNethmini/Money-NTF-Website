@@ -11,12 +11,13 @@ const TextAnimation = (
     }: {
         children: string;
         delay?: number;
+        divideBy?: 'letter' | 'word';
     }
 ) => {
   return (
     <span>
         {
-        children.split("").map((letter, index) => (
+        children.split(" ").map((word, index) => (
             <motion.span
                 className='relative inline-block overflow-hidden'
                 initial ={{
@@ -29,14 +30,12 @@ const TextAnimation = (
                 }}
                 viewport={{ once: true }}
                 transition={{
-                    duration: 0.8,
-                    delay: delay + index * 0.02,
+                    duration: 0.5,
+                    delay: delay + index * 0.05,
                     ease: 'easeOut',
                 }}
                 key={index}>
-                    <span className='inline-block'>
-                        { letter === " " ? "\u00A0" : letter }
-                    </span>
+                    {word}&nbsp;
                 </motion.span>
 
         ))}

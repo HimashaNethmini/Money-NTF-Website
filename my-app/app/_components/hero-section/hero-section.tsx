@@ -16,7 +16,7 @@ const HeroSection = () => {
       <div className="text-25 lg:text-60 flex flex-col items-center justify-center gap-[14px] font-bold py-[15px] lg:py-[25px]">
         {/* first line */}
         <div className="flex items-center gap-[15px]">
-          <TextAnimation delay={0.8}>Discover</TextAnimation>
+          <TextAnimation delay={0.8} divideBy="letter">Discover</TextAnimation>
 
           <HeroFrame
             height={{ base: 34, lg: 68 }}
@@ -24,7 +24,7 @@ const HeroSection = () => {
             bgImage="/images/hero-frame-1.jpg"
           />
 
-          <TextAnimation delay={0.8}>Collect</TextAnimation>
+          <TextAnimation delay={0.8} divideBy="letter">Collect</TextAnimation>
         </div>
 
         {/* second line */}
@@ -36,11 +36,11 @@ const HeroSection = () => {
             animationType="move"
           />
 
-          <TextAnimation delay={1.1}> & Sell Extraordinary </TextAnimation>
+          <TextAnimation delay={1.1} divideBy="letter"> & Sell Extraordinary </TextAnimation>
         </div>
 
         {/* third line */}
-        <TextAnimation delay={1.1}>Rare NTFs</TextAnimation>
+        <TextAnimation delay={1.1} divideBy="letter">Rare NTFs</TextAnimation>
       </div>
 
       {/* frame rotation */}
@@ -57,10 +57,13 @@ const HeroSection = () => {
         <span 
           className="flex justify-center items-center text-center text-[10px] leading-3 w-[202px]
           lg:order-1 lg:text-start lg:leading-6 lg:text-14">
-          It is a long established fact that a reader will be distracted by the
-          readable content of a page when looking at its layout. The point of
-          using Lorem Ipsum is that it has a more-or-less normal distribution of
-          letters, as opposed to using 'Content here'.
+            <TextAnimation delay={1} divideBy="word">
+            It is a long established fact that a reader will be distracted by the
+            readable content of a page when looking at its layout. The point of
+            using Lorem Ipsum is that it has a more-or-less normal distribution of
+            letters, as opposed to using 'Content here'.
+            </TextAnimation>
+
         </span>
       </div>
     </div>
