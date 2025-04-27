@@ -36,7 +36,7 @@ const TextAnimation = (
                 key={index}>
                     <span className='inline-block'>
                         { letter === " " ? "\u00A0" : letter }
-                    </span>'
+                    </span>
                 </motion.span>
 
         ))}
