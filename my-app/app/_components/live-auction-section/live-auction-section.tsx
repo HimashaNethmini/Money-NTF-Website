@@ -1,44 +1,41 @@
 "use client";
 
-import React, {useRef} from "react";
+import React, { useRef } from "react";
 import Image from "next/image";
 import TextAnimation from "../text-animation";
 import Button from "../button";
 import { useScroll, useTransform, motion } from "framer-motion";
 
 const LiveAuctionSection = () => {
+  //adding animation to the monkey frame
+  const containerRef = useRef<HTMLDivElement>(null);
 
-    //adding animation to the monkey frame
-    const containerRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["0 1", "1 0"],
+  });
 
-    const {scrollYProgress} = useScroll({
-        target: containerRef,
-        offset: ["0 1", "1 0"],
-    });
-
-    const monkeyY = useTransform(scrollYProgress, [0, 0.7], [300, 0]);
+  const monkeyY = useTransform(scrollYProgress, [0, 0.7], [300, 0]);
 
   return (
     <div className="flex flex-col gap-[40px]">
-
       {/* monkey frame */}
       <div
-      ref={containerRef}
+        ref={containerRef}
         className="relative h-[243px] rounded-lg overflow-hidden 
                     bg-gradient-to-b from-[#EF962E] to-[#FFAF36]"
       >
         <motion.div
-          style={{y: monkeyY}}
-          className="relative h-[100%] w-[100%]"
+          style={{ y: monkeyY }}
+          className="relative h-[100%] w-[100%] bottom-0 left-0 right-0 ml-auto mr-auto"
         >
-        <Image
-          src="/images/black-monkey.png"
-          alt="monkey frame"
-          fill
-          className="object-cover"
-        />
-
-</motion.div>
+          <Image
+            src="/images/black-monkey.png"
+            alt="monkey frame"
+            fill
+            className="object-cover"
+          />
+        </motion.div>
       </div>
 
       {/* live aution details */}
@@ -84,10 +81,9 @@ const LiveAuctionSection = () => {
 
         {/* buttons */}
         <div className="flex gap-[20px] pt-[10px]">
-            <Button>Start Mining</Button>
-            <Button variant="outlined">Learn more</Button>
+          <Button>Start Mining</Button>
+          <Button variant="outlined">Learn more</Button>
         </div>
-
       </div>
     </div>
   );
