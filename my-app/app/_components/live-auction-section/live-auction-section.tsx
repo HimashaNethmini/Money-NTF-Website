@@ -58,6 +58,13 @@ const LiveAuctionSection = () => {
 
           <BidBlock title="Time Left" name="12:50:23" />
         </div>
+
+        {/* buttons */}
+        <div className="flex gap-[20px] pt-[10px]">
+            <button>Start Mining</button>
+            <button>Learn more</button>
+        </div>
+
       </div>
     </div>
   );
