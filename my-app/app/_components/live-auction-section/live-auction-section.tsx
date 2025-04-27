@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import TextAnimation from "../text-animation";
+import Button from "../button";
 
 const LiveAuctionSection = () => {
   return (
@@ -61,8 +62,8 @@ const LiveAuctionSection = () => {
 
         {/* buttons */}
         <div className="flex gap-[20px] pt-[10px]">
-            <button>Start Mining</button>
-            <button>Learn more</button>
+            <Button>Start Mining</Button>
+            <Button variant="outlined">Learn more</Button>
         </div>
 
       </div>

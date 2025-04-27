@@ -11,7 +11,7 @@ const Button = (
   return (
     <button 
         className="flex w-full items-center justify-center 
-        rounded-md px-[24px] py-[9px] bg-primary 
+        rounded-lg px-[24px] py-[9px] bg-primary 
         font-semibold text-white"
     >
       {children}
