@@ -18,21 +18,28 @@ const LiveAuctionSection = () => {
         />
       </div>
 
-{/* live aution details */}
+      {/* live aution details */}
       <div className="flex flex-col gap-[14px]">
-
         {/* live action*/}
         <div className="flex gap-[12px]">
-            <div className="h-auto w-[4px] rounded-md bg-[#6351DB]" />
-                <span className="text-[12px]">
-                    <TextAnimation delay={0.3} divideBy="word">
-                        Live Auction
-                    </TextAnimation>
-                </span>
-            </div>
-
-            {/* heading */}
+          <div className="h-auto w-[4px] rounded-md bg-[#6351DB]" />
+          <span className="text-[12px]">
+            <TextAnimation delay={0.3} divideBy="word">
+              Live Auction
+            </TextAnimation>
+          </span>
         </div>
+
+        {/* heading */}
+        <span className="text-30 font-bold">
+          <TextAnimation delay={0.4} divideBy="word">
+            Bored_Ape #333
+          </TextAnimation>
+        </span>
+
+        {/* blocks */}
+        
+      </div>
     </div>
   );
 };
