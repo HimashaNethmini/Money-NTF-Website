@@ -18,7 +18,7 @@ const LiveAuctionSection = () => {
   const monkeyY = useTransform(scrollYProgress, [0, 0.7], [300, 0]);
 
   return (
-    <div className="flex flex-col gap-[40px]">
+    <div className="flex flex-col gap-[40px] lg:flex-row lg:gap-[89px]">
       {/* monkey frame */}
       <div
         ref={containerRef}
