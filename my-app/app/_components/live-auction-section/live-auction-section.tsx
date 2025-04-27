@@ -107,10 +107,10 @@ const Block = ({
       </span>
 
       <div className="flex gap-[14px] rounded-lg bg-[#454448] px-[20px] py-[11px]">
-        <div className="relative h-[25px] w-[25px]">
+        <div className="relative h-[25px] w-[25px] lg:h-[40px] lg:w-[40px]">
           <Image src={image} alt={"3d avatar"} fill className="rounded-full" />
         </div>
-        <span className="text-14 lg:text-18">
+        <span className="text-14 lg:text-25">
           <TextAnimation delay={0.5}>{name}</TextAnimation>
         </span>
       </div>
@@ -122,11 +122,11 @@ const Block = ({
 const BidBlock = ({ title, name }: { title: string; name: string }) => {
   return (
     <div className="flex flex-1 flex-col gap-[14px]">
-      <span className="text-15">
+      <span className="text-15 lg:text-25">
         <TextAnimation delay={0.5}>{title}</TextAnimation>
       </span>
 
-      <span className="text-30">
+      <span className="text-30 lg:text-55">
         <TextAnimation delay={0.5}>{name}</TextAnimation>
       </span>
     </div>
