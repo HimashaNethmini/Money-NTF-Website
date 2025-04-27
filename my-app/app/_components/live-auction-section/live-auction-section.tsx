@@ -51,6 +51,20 @@ const LiveAuctionSection = () => {
                 name="Your Dream"
             />
         </div>
+
+        {/* Bid blocks */}
+        <div className="flex justify-between gap-[20px] py-[20px]">
+            <BidBlock 
+             title="Current Bid"
+             name="1.23 ETH"
+             />
+
+             <BidBlock
+                title="Time Left"
+                name="12:50:23"
+            />
+
+        </div>
       </div>
     </div>
   );
@@ -64,7 +78,7 @@ const Block = ({title, image, name}: {
 }) => {
     return (
         <div className="flex flex-1 flex-col gap-[14px]">
-            <span className="text-14">
+            <span className="text-15">
                 <TextAnimation delay={0.5}>
                 {title}
                 </TextAnimation>
@@ -81,6 +95,30 @@ const Block = ({title, image, name}: {
                     />
             </div>
             <span className="text-14">
+                <TextAnimation delay={0.5}>
+                {name}
+                </TextAnimation>
+            </span>
+            </div>
+        </div>
+    )
+}
+
+// defining bid blocks
+const BidBlock = ({title,name}: {
+    title: string,
+    name: string,
+}) => {
+    return (
+        <div className="flex flex-1 flex-col gap-[14px]">
+            <span className="text-15">
+                <TextAnimation delay={0.5}>
+                {title}
+                </TextAnimation>
+            </span>
+
+            <div className="flex gap-[30px]">
+            <span className="text-30">
                 <TextAnimation delay={0.5}>
                 {name}
                 </TextAnimation>
