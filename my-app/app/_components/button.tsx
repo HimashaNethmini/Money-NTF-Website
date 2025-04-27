@@ -12,7 +12,7 @@ const Button = (
   return (
     <button 
         className={twMerge("flex w-full items-center justify-center rounded-lg px-[24px] py-[9px] text-white",
-        variant === "filled" ? "bg-primary" : "border-primary")}>      {children}
+        variant === "filled" ? "bg-primary" : "border-primary border-[2px]")}>      {children}
     </button>
   );
 };
