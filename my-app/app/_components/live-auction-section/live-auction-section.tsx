@@ -23,7 +23,8 @@ const LiveAuctionSection = () => {
       <div
         ref={containerRef}
         className="relative h-[243px] rounded-lg overflow-hidden 
-                    bg-gradient-to-b from-[#EF962E] to-[#FFAF36]"
+                    bg-gradient-to-b from-[#EF962E] to-[#FFAF36]
+                    lg:h-[600px] lg:flex-1 lg:rounded-3xl"
       >
         <motion.div
           style={{ y: monkeyY }}
