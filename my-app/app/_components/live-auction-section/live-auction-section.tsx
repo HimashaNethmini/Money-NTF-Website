@@ -63,10 +63,14 @@ const Block = ({title, image, name}: {
     name: string,
 }) => {
     return (
-        <div className="flex flex-1 flex-col">
-            <span>{title}</span>
+        <div className="flex flex-1 flex-col gap-[14px]">
+            <span className="text-14">
+                <TextAnimation delay={0.5}>
+                {title}
+                </TextAnimation>
+            </span>
 
-            <div className="flex gap-[14px] rounded-lg">
+            <div className="flex gap-[14px] rounded-lg bg-[#454448] px-[20px] py-[11px]">
 
             <div className="relative h-[25px] w-[25px]">
                 <Image
@@ -76,7 +80,11 @@ const Block = ({title, image, name}: {
                     className="rounded-full"
                     />
             </div>
-            <span>{name}</span>
+            <span className="text-14">
+                <TextAnimation delay={0.5}>
+                {name}
+                </TextAnimation>
+            </span>
             </div>
         </div>
     )
