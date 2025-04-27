@@ -7,7 +7,8 @@ import { clipPath } from 'motion/react-client';
 const TextAnimation = (
     {
         children,
-        delay=0
+        delay=0,
+        divideBy = "word",
     }: {
         children: string;
         delay?: number;
