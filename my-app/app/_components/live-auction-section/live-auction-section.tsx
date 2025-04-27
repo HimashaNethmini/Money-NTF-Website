@@ -1,22 +1,44 @@
-import React from "react";
+"use client";
+
+import React, {useRef} from "react";
 import Image from "next/image";
 import TextAnimation from "../text-animation";
 import Button from "../button";
+import { useScroll, useTransform, motion } from "framer-motion";
 
 const LiveAuctionSection = () => {
+
+    //adding animation to the monkey frame
+    const containerRef = useRef<HTMLDivElement>(null);
+
+    const {scrollYProgress} = useScroll({
+        target: containerRef,
+        offset: ["0 1", "1 0"],
+    });
+
+    const monkeyY = useTransform(scrollYProgress, [0, 0.7], [300, 0]);
+
   return (
     <div className="flex flex-col gap-[40px]">
+
       {/* monkey frame */}
       <div
+      ref={containerRef}
         className="relative h-[243px] rounded-lg overflow-hidden 
                     bg-gradient-to-b from-[#EF962E] to-[#FFAF36]"
       >
+        <motion.div
+          style={{y: monkeyY}}
+          className="relative h-[100%] w-[100%]"
+        >
         <Image
           src="/images/black-monkey.png"
           alt="monkey frame"
           fill
           className="object-cover"
         />
+
+</motion.div>
       </div>
 
       {/* live aution details */}
