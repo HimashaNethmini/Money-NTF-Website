@@ -63,11 +63,21 @@ const Block = ({title, image, name}: {
     name: string,
 }) => {
     return (
-        <div className="flex flex-1">
-            <span>
-                {title}
-            </span>
+        <div className="flex flex-1 flex-col">
+            <span>{title}</span>
 
+            <div className="flex gap-[14px] rounded-lg">
+
+            <div className="relative h-[25px] w-[25px]">
+                <Image
+                    src={image}
+                    alt={"3d avatar"}
+                    fill
+                    className="rounded-full"
+                    />
+            </div>
+            <span>{name}</span>
+            </div>
         </div>
     )
 }
