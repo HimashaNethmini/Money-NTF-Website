@@ -39,31 +39,24 @@ const LiveAuctionSection = () => {
 
         {/* blocks */}
         <div className="flex justify-between gap-[20px]">
-            <Block 
-             title="Creator"
-             image="/images/avatars/avatar-1.avif"
-             name="@obsjduro"
-             />
+          <Block
+            title="Creator"
+            image="/images/avatars/avatar-1.avif"
+            name="@obsjduro"
+          />
 
-             <Block
-                title="Collection"
-                image="/images/avatars/avatar-2.avif"
-                name="Your Dream"
-            />
+          <Block
+            title="Collection"
+            image="/images/avatars/avatar-2.avif"
+            name="Your Dream"
+          />
         </div>
 
         {/* Bid blocks */}
         <div className="flex justify-between gap-[20px] py-[20px]">
-            <BidBlock 
-             title="Current Bid"
-             name="1.23 ETH"
-             />
+          <BidBlock title="Current Bid" name="1.23 ETH" />
 
-             <BidBlock
-                title="Time Left"
-                name="12:50:23"
-            />
-
+          <BidBlock title="Time Left" name="12:50:23" />
         </div>
       </div>
     </div>
@@ -71,61 +64,46 @@ const LiveAuctionSection = () => {
 };
 
 // defining block
-const Block = ({title, image, name}: {
-    title: string,
-    image: string,
-    name: string,
+const Block = ({
+  title,
+  image,
+  name,
+}: {
+  title: string;
+  image: string;
+  name: string;
 }) => {
-    return (
-        <div className="flex flex-1 flex-col gap-[14px]">
-            <span className="text-15">
-                <TextAnimation delay={0.5}>
-                {title}
-                </TextAnimation>
-            </span>
+  return (
+    <div className="flex flex-1 flex-col gap-[14px]">
+      <span className="text-15">
+        <TextAnimation delay={0.5}>{title}</TextAnimation>
+      </span>
 
-            <div className="flex gap-[14px] rounded-lg bg-[#454448] px-[20px] py-[11px]">
-
-            <div className="relative h-[25px] w-[25px]">
-                <Image
-                    src={image}
-                    alt={"3d avatar"}
-                    fill
-                    className="rounded-full"
-                    />
-            </div>
-            <span className="text-14">
-                <TextAnimation delay={0.5}>
-                {name}
-                </TextAnimation>
-            </span>
-            </div>
+      <div className="flex gap-[14px] rounded-lg bg-[#454448] px-[20px] py-[11px]">
+        <div className="relative h-[25px] w-[25px]">
+          <Image src={image} alt={"3d avatar"} fill className="rounded-full" />
         </div>
-    )
-}
+        <span className="text-14">
+          <TextAnimation delay={0.5}>{name}</TextAnimation>
+        </span>
+      </div>
+    </div>
+  );
+};
 
 // defining bid blocks
-const BidBlock = ({title,name}: {
-    title: string,
-    name: string,
-}) => {
-    return (
-        <div className="flex flex-1 flex-col gap-[14px]">
-            <span className="text-15">
-                <TextAnimation delay={0.5}>
-                {title}
-                </TextAnimation>
-            </span>
+const BidBlock = ({ title, name }: { title: string; name: string }) => {
+  return (
+    <div className="flex flex-1 flex-col gap-[14px]">
+      <span className="text-15">
+        <TextAnimation delay={0.5}>{title}</TextAnimation>
+      </span>
 
-            <div className="flex gap-[30px]">
-            <span className="text-30">
-                <TextAnimation delay={0.5}>
-                {name}
-                </TextAnimation>
-            </span>
-            </div>
-        </div>
-    )
-}
+      <span className="text-30">
+        <TextAnimation delay={0.5}>{name}</TextAnimation>
+      </span>
+    </div>
+  );
+};
 
 export default LiveAuctionSection;
