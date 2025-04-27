@@ -38,10 +38,38 @@ const LiveAuctionSection = () => {
         </span>
 
         {/* blocks */}
-        
+        <div className="flex justify-between gap-[20px]">
+            <Block 
+             title="Creator"
+             image="/images/avatars/avatar-1.avif"
+             name="@obsjduro"
+             />
+
+             <Block
+                title="Collection"
+                image="/images/avatars/avatar-2.avif"
+                name="Your Dream"
+            />
+        </div>
       </div>
     </div>
   );
 };
+
+// defining block
+const Block = ({title, image, name}: {
+    title: string,
+    image: string,
+    name: string,
+}) => {
+    return (
+        <div className="flex flex-1">
+            <span>
+                {title}
+            </span>
+
+        </div>
+    )
+}
 
 export default LiveAuctionSection;
