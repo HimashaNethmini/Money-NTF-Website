@@ -1,4 +1,5 @@
 import React from "react";
+import { twMerge } from "tailwind-merge";
 
 const Button = (
     {
@@ -10,11 +11,8 @@ const Button = (
 }) => {
   return (
     <button 
-        className="flex w-full items-center justify-center 
-        rounded-lg px-[24px] py-[9px] bg-primary 
-        font-semibold text-white"
-    >
-      {children}
+        className={twMerge("flex w-full items-center justify-center rounded-lg px-[24px] py-[9px] text-white",
+        variant === "filled" ? "bg-primary" : "border-primary")}>      {children}
     </button>
   );
 };
