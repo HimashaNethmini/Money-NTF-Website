@@ -40,11 +40,11 @@ const LiveAuctionSection = () => {
       </div>
 
       {/* live aution details */}
-      <div className="flex flex-col gap-[14px]">
+      <div className="flex flex-col gap-[14px] lg:flex-1 lg:justify-between">
         {/* live action*/}
         <div className="flex gap-[12px]">
-          <div className="h-auto w-[4px] rounded-md bg-[#6351DB]" />
-          <span className="text-[12px]">
+          <div className="h-auto w-[4px] lg:w-[12px] rounded-md bg-[#6351DB]" />
+          <span className="text-[12px] lg:text-[20px]">
             <TextAnimation delay={0.3} divideBy="word">
               Live Auction
             </TextAnimation>
@@ -52,7 +52,7 @@ const LiveAuctionSection = () => {
         </div>
 
         {/* heading */}
-        <span className="text-30 font-bold">
+        <span className="text-30 lg:text-[35px] font-bold">
           <TextAnimation delay={0.4} divideBy="word">
             Bored_Ape #333
           </TextAnimation>
@@ -102,7 +102,7 @@ const Block = ({
 }) => {
   return (
     <div className="flex flex-1 flex-col gap-[14px]">
-      <span className="text-15">
+      <span className="text-15 lg:text-20">
         <TextAnimation delay={0.5}>{title}</TextAnimation>
       </span>
 
@@ -110,7 +110,7 @@ const Block = ({
         <div className="relative h-[25px] w-[25px]">
           <Image src={image} alt={"3d avatar"} fill className="rounded-full" />
         </div>
-        <span className="text-14">
+        <span className="text-14 lg:text-18">
           <TextAnimation delay={0.5}>{name}</TextAnimation>
         </span>
       </div>

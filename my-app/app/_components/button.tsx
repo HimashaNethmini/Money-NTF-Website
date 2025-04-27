@@ -14,7 +14,7 @@ const Button = (
         className={twMerge("flex w-full items-center justify-center rounded-lg px-[24px] py-[9px] text-white",
         variant === "filled" ? "bg-primary" : "border-primary border-[2px] bg-transparent hover:bg-[#503899]")}>      
         
-        <span className="text-15 text-white">
+        <span className="text-15 lg:text-20 text-white">
         {children}
         </span>
     </button>
