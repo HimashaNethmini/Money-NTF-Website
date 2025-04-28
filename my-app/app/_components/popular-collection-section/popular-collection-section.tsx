@@ -3,9 +3,9 @@
 import React, { useState } from "react";
 import TextAnimation from "../text-animation";
 import CollectionCategory from "./collection-category";
+import { COLLECTION_DATA } from "@/app/_data/collection";
 
 const PopularCollectionsSection = () => {
-
   // checking the active collection category
   const [activeCategory, setActiveCategory] = useState<string>("all");
 
@@ -22,6 +22,16 @@ const PopularCollectionsSection = () => {
         activeCategory={activeCategory}
         setActiveCategory={setActiveCategory}
       />
+
+      {/* collection cards - filtered for the selected category*/}
+      <div className="flex flex-col flex-wrap items-center justify-start gap-[29px] lg:flex-row lg:gap-[30px]">
+        {(activeCategory === "all"
+          ? COLLECTION_DATA
+          : COLLECTION_DATA.filter((card) => card.category === activeCategory)
+        ).map((card, i) => (
+          <span key={i}>{card.name}</span>
+        ))}
+      </div>
     </div>
   );
 };
