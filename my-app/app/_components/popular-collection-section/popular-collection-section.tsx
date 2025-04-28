@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import TextAnimation from "../text-animation";
 import CollectionCategory from "./collection-category";
 import { COLLECTION_DATA } from "@/app/_data/collection";
+import CollectionCard from "./collection-card";
 
 const PopularCollectionsSection = () => {
   // checking the active collection category
@@ -29,7 +30,9 @@ const PopularCollectionsSection = () => {
           ? COLLECTION_DATA
           : COLLECTION_DATA.filter((card) => card.category === activeCategory)
         ).map((card, i) => (
-          <span key={i}>{card.name}</span>
+          <div key={i}>
+            <CollectionCard />
+          </div>
         ))}
       </div>
     </div>
