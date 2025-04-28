@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState } from "react";
 import TextAnimation from "../text-animation";
 import CollectionCategory from "./collection-category";
