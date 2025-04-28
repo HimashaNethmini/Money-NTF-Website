@@ -1,5 +1,6 @@
 import React from 'react'
 import TextAnimation from '../text-animation'
+import CollectionCategory from './collection-category'
 
 const PopularCollectionsSection = () => {
   return (
@@ -10,6 +11,8 @@ const PopularCollectionsSection = () => {
     </span>
 
     {/* category section */}
+    <CollectionCategory />
+
     </div>
 
   )
