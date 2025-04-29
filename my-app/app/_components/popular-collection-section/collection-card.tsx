@@ -27,8 +27,19 @@ const CollectionCard = ({
           {/* user image */}
           <div className="relative h-[26px] w-[26px]">
 
-            <Image src={card.avatar} alt="user" fill />
+            <Image src={card.avatar} alt="user" fill className="rounded-full object-cover"/>
           </div>
+
+          <div className="flex flex-col">
+            {/* user name */}
+            <span className="text-12">{card.name}</span>
+
+            {/* user username */}
+            <span className="text-10 text-white/50">
+              {card.username}
+            </span>
+          </div>
+
         </div>
       </div>
 
