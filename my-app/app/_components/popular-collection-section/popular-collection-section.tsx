@@ -30,10 +30,12 @@ const PopularCollectionsSection = () => {
           ? COLLECTION_DATA
           : COLLECTION_DATA.filter((card) => card.category === activeCategory)
         ).map((card, i) => (
-          <div key={i}>
+
+          <div key={i} className="w-full">
             <CollectionCard 
               card = {card} />
           </div>
+          
         ))}
       </div>
     </div>
