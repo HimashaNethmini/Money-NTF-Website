@@ -16,7 +16,9 @@ const CollectionCard = ({
   };
 }) => {
   return (
-    <div className="flex w-[100%] flex-col gap-[20px] rounded-[10px] bg-white/10 p-[10px]">
+    <div 
+    className="flex w-[100%] flex-col gap-[20px] rounded-[10px] bg-white/10 p-[10px] 
+    lg:gap-[20px] lg:w-[380px] lg:flex-1 lg:p-[20px]">
 
       {/* header */}
       <div className="flex items-start justify-between">
@@ -24,7 +26,7 @@ const CollectionCard = ({
         {/* user info */}
         <div className="flex items-center gap-3">
           {/* user image */}
-          <div className="relative h-[26px] w-[26px]">
+          <div className="relative h-[26px] w-[26px] lg:h-[47px] lg:w-[47px]">
             <Image
               src={card.avatar}
               alt="user"
@@ -35,16 +37,16 @@ const CollectionCard = ({
 
           <div className="flex flex-col">
             {/* user name */}
-            <span className="text-12">{card.name}</span>
+            <span className="text-12 lg:text-18">{card.name}</span>
 
             {/* user username */}
-            <span className="text-10 text-white/50">{card.username}</span>
+            <span className="text-10 text-white/50 lg:text-14">{card.username}</span>
           </div>
         </div>
 
         {/* likes count */}
         <div className="flex items-center gap-2 ">
-          <div className="relative h-[18px] w-[18px]">
+          <div className="relative h-[18px] w-[18px] lg:h-[20px] lg:w-[20px]">
             <Image
               src="/images/heart.png"
               alt="heart"
@@ -53,7 +55,7 @@ const CollectionCard = ({
             />
           </div>
 
-          <span className="text-[11px]">63</span>
+          <span className="text-[11px] lg:text-18">63</span>
         </div>
       </div>
 
@@ -62,7 +64,7 @@ const CollectionCard = ({
 
         {/* first columns with one image */}
         <div
-          className="relative w-full h-[257px] overflow-hidden rounded-lg"
+          className="relative w-full flex-1 h-[257px] overflow-hidden rounded-lg"
           style={{ backgroundColor: card.nfts[0].bg }}
         >
           <Image
@@ -72,7 +74,7 @@ const CollectionCard = ({
             className="object-cover"
           />
         </div>
-        
+
         {/* second column */}
         <div className="flex flex-col gap-4">
           <div

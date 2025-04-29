@@ -43,7 +43,7 @@ const CollectionCategory = ({
           
           //include tailWind merge - if the selected category is the current category then the border bg is orange
           className={twMerge(
-            "cursor-pointer text-12 rounded-full border border-white/50 px-[20px] py-[18px] text-center",
+            "cursor-pointer text-12 rounded-full border border-white/50 px-[20px] py-[18px] text-center lg:text-16 lg:min-w-[100px] lg:px-[40px] lg:py-[11px]",
 
             activeCategory === category.value && "bg-primary border-none"
           )}
