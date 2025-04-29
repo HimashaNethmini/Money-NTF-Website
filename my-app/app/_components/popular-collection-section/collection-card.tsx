@@ -47,11 +47,16 @@ const CollectionCard = ({
           <div className="relative h-[18px] w-[18px]">
             <Image src="/images/heart.png" alt="heart" fill className="object-contain" />
           </div>
+
+          <span className="text-[11px]">63</span>
         </div>
       </div>
 
-      {/* grid */}
-      <div>Grid</div>
+      {/* grid of monkeys*/}
+      <div className="grid grid-cols-2 gap-4"> {/* using css grid system */}
+
+        {/* first columns with one image */}
+      </div>
     </div>
   );
 };
