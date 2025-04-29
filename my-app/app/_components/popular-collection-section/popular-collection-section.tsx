@@ -5,7 +5,7 @@ import TextAnimation from "../text-animation";
 import CollectionCategory from "./collection-category";
 import { COLLECTION_DATA } from "@/app/_data/collection";
 import CollectionCard from "./collection-card";
-import { AnimatePresence } from "motion/react";
+import { motion, AnimatePresence } from "motion/react";
 
 const PopularCollectionsSection = () => {
   // checking the active collection category
@@ -34,10 +34,18 @@ const PopularCollectionsSection = () => {
           : COLLECTION_DATA.filter((card) => card.category === activeCategory)
         ).map((card, i) => (
 
-          <div key={i} className="w-full">
+          <motion.div
+          initial={{ opacity:0, scale:0.9 }}
+          animate={{ opacity:1, scale:1 }}  //in view animation
+          exit={{ opacity:0, scale: 0.9 }}
+          transition={{duration:0.3}}
+          layout
+          key={i} 
+          className="w-full"
+          >
             <CollectionCard 
               card = {card} />
-          </div>
+          </motion.div>
 
         ))}
         </AnimatePresence>
