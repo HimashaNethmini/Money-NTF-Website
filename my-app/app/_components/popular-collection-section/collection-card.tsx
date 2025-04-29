@@ -41,6 +41,13 @@ const CollectionCard = ({
           </div>
 
         </div>
+
+        {/* likes count */}
+        <div className="flex items-center gap-2 ">
+          <div className="relative h-[18px] w-[18px]">
+            <Image src="/images/heart.png" alt="heart" fill className="object-contain" />
+          </div>
+        </div>
       </div>
 
       {/* grid */}
