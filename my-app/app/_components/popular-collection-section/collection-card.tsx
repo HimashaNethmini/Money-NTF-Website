@@ -17,8 +17,10 @@ const CollectionCard = ({
 }) => {
   return (
     <div className="flex w-[100%] flex-col gap-[20px] rounded-[10px] bg-white/10 p-[10px]">
+
       {/* header */}
       <div className="flex items-start justify-between">
+
         {/* user info */}
         <div className="flex items-center gap-3">
           {/* user image */}
@@ -56,10 +58,13 @@ const CollectionCard = ({
       </div>
 
       {/* grid of monkeys*/}
-      <div className="grid grid-cols-2 gap-4"> {/* using css grid system */}
+      <div className="grid grid-cols-2 gap-4">{/* using css grid system */}
 
         {/* first columns with one image */}
-        <div className="relative w-full h-[257px] overflow-hidden">
+        <div
+          className="relative w-full h-[257px] overflow-hidden rounded-lg"
+          style={{ backgroundColor: card.nfts[0].bg }}
+        >
           <Image
             src={card.nfts[0].image}
             alt="collection"
@@ -67,18 +72,33 @@ const CollectionCard = ({
             className="object-cover"
           />
         </div>
-
+        
         {/* second column */}
         <div className="flex flex-col gap-4">
-          <div className="relative flex-1 w-full rounded-lg overflow-hidden">
-            <Image src={card.nfts[1].image} alt="colletion" fill  className="object-contain"/>
+          <div
+            className="relative flex-1 w-full rounded-lg overflow-hidden"
+            style={{ backgroundColor: card.nfts[1].bg }}
+          >
+            <Image
+              src={card.nfts[1].image}
+              alt="colletion"
+              fill
+              className="object-contain"
+            />
           </div>
 
           {/* third column  */}
-          <div className="relative flex-1 w-full rounded-lg overflow-hidden">
-            <Image src={card.nfts[2].image} alt="colletion" fill  className="object-contain"/>
+          <div
+            className="relative flex-1 w-full rounded-lg overflow-hidden"
+            style={{ backgroundColor: card.nfts[2].bg }}
+          >
+            <Image
+              src={card.nfts[2].image}
+              alt="colletion"
+              fill
+              className="object-contain"
+            />
           </div>
-
         </div>
       </div>
     </div>
