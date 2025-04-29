@@ -75,6 +75,10 @@ const CollectionCard = ({
           </div>
 
           {/* third column  */}
+          <div className="relative flex-1 w-full rounded-lg overflow-hidden">
+            <Image src={card.nfts[2].image} alt="colletion" fill  className="object-contain"/>
+          </div>
+
         </div>
       </div>
     </div>
