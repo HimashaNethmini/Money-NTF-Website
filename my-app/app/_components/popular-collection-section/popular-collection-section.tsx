@@ -5,6 +5,7 @@ import TextAnimation from "../text-animation";
 import CollectionCategory from "./collection-category";
 import { COLLECTION_DATA } from "@/app/_data/collection";
 import CollectionCard from "./collection-card";
+import { AnimatePresence } from "motion/react";
 
 const PopularCollectionsSection = () => {
   // checking the active collection category
@@ -26,6 +27,8 @@ const PopularCollectionsSection = () => {
 
       {/* collection cards - filtered for the selected category*/}
       <div className="flex flex-col flex-wrap items-center justify-start gap-[29px] lg:flex-row lg:gap-[30px]">
+
+        <AnimatePresence mode="popLayout"> 
         {(activeCategory === "all"
           ? COLLECTION_DATA
           : COLLECTION_DATA.filter((card) => card.category === activeCategory)
@@ -35,8 +38,9 @@ const PopularCollectionsSection = () => {
             <CollectionCard 
               card = {card} />
           </div>
-          
+
         ))}
+        </AnimatePresence>
       </div>
     </div>
   );
