@@ -1,6 +1,7 @@
 import HeroSection from "./_components/hero-section/hero-section";
 import LiveAuctionSection from "./_components/live-auction-section/live-auction-section";
 import PopularCollectionsSection from "./_components/popular-collection-section/popular-collection-section";
+import TopCollectionSection from "./_components/top-collection-section/top-collection-section";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <HeroSection />
       <LiveAuctionSection />
       <PopularCollectionsSection />
+      <TopCollectionSection />
     </div>
   );
 }
