@@ -56,6 +56,9 @@ const CollectionCard = ({
       <div className="grid grid-cols-2 gap-4"> {/* using css grid system */}
 
         {/* first columns with one image */}
+        <div className="relative w-full h-[257px] overflow-hidden">
+          <Image src={card.nfts[0].image} alt="collection" fill className="object-cover" />
+        </div>
       </div>
     </div>
   );
