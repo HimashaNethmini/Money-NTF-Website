@@ -31,7 +31,8 @@ const PopularCollectionsSection = () => {
           : COLLECTION_DATA.filter((card) => card.category === activeCategory)
         ).map((card, i) => (
           <div key={i}>
-            <CollectionCard />
+            <CollectionCard 
+              card = {card} />
           </div>
         ))}
       </div>
