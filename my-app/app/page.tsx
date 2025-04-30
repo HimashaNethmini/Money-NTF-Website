@@ -1,3 +1,4 @@
+import CompaniesSection from "./_components/companies-section/companies-section";
 import HeroSection from "./_components/hero-section/hero-section";
 import LiveAuctionSection from "./_components/live-auction-section/live-auction-section";
 import PopularCollectionsSection from "./_components/popular-collection-section/popular-collection-section";
@@ -12,6 +13,7 @@ export default function Home() {
       <PopularCollectionsSection />
       <TopCollectionSection />
       <SubscribeSection />
+      <CompaniesSection />
     </div>
   );
 }
