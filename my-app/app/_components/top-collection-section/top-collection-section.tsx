@@ -1,6 +1,9 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
 import TextAnimation from "../text-animation";
+import {motion} from "framer-motion";
 import { TOP_COLLECTION_DATA } from "@/app/_data/top-collection";
 
 const TopCollectionSection = () => {
@@ -17,7 +20,15 @@ const TopCollectionSection = () => {
         className="flex flex-col items-center justify-center gap-[10px]">
         
         {TOP_COLLECTION_DATA.map((item, index) => (
-          <div
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ 
+              duration: 0.3, 
+              delay: index * 0.1, 
+              ease: "easeOut"
+            }} //how much delay each element should have 
             key={index}
             className="flex w-[100px] max-w-[320px] items-center gap-[8px] border-b-white/40 border-b py-[9px]"
           >
@@ -41,7 +52,7 @@ const TopCollectionSection = () => {
                 ${item.price.toLocaleString()}
               </span>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>
