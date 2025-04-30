@@ -11,13 +11,13 @@ const TopCollectionSection = () => {
     <div 
       className="flex flex-col gap-[16px]">
       <span 
-        className="text-30 px-[28px] text-center font-bold">
+        className="text-30 px-[28px] text-center font-bold lg:text-60">
         <TextAnimation delay={0.2}> Our Top Collection </TextAnimation>
       </span>
 
       {/* collection list */}
       <div 
-        className="flex flex-col items-center justify-center gap-[10px]">
+        className="flex flex-col items-center justify-center gap-[10px] lg:mt-4 lg:flex-row lg:flex-wrap lg:gap-x-16 ">
         
         {TOP_COLLECTION_DATA.map((item, index) => (
           <motion.div
@@ -30,10 +30,10 @@ const TopCollectionSection = () => {
               ease: "easeOut"
             }} //how much delay each element should have 
             key={index}
-            className="flex w-[100px] max-w-[320px] items-center gap-[8px] border-b-white/40 border-b py-[9px]"
+            className="flex w-[100px] max-w-[320px] items-center gap-[8px] border-b-white/40 border-b py-[9px] lg:gap-[19px] lg:py-[28px]"
           >
             <span 
-              className="text-16 font-bold">{index + 1}. </span>
+              className="text-16 font-bold lg:text-20">{index + 1}. </span>
             
             <Image
               src={item.image}
@@ -46,9 +46,9 @@ const TopCollectionSection = () => {
             <div 
               className="flex flex-col gap-[5px]">
               <span 
-                className="text-[12px] font-bold">{item.name}</span>
+                className="text-[12px] font-bold lg:text-18">{item.name}</span>
               <span 
-                className="font-bold text-10 text-white/40">
+                className="font-bold text-10 text-white/40 lg:text-18">
                 ${item.price.toLocaleString()}
               </span>
             </div>
