@@ -5,7 +5,7 @@ const CompaniesSection = () => {
   return (
     <div
         className='relative w-full py-10 overflow-hidden'>
-            <div className="whitespace-nowrap">
+            <div className="whitespace-nowrap animate-scroll">
                 {
                     Array.from({ length: 7 }).map((_, index) => (
                         <div className="inline-block">
