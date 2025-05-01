@@ -24,7 +24,16 @@ const Footer = () => {
         <div className='h-[1px] bg-white/50 w-full' />
 
         {/* bottom with links */}
-        
+        <div className="flex flex-col gap-8">
+
+            {/* page links - css grid */}
+            <div className="grid grid-cols-3 gap-4">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+            </div>
+        </div>
+
       
     </div>
   )
