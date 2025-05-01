@@ -1,6 +1,7 @@
 import React from 'react'
 import Logo from '../header/logo'
 import Button from '../button'
+import Link from 'next/link'
 
 const Footer = () => {
   return (
@@ -26,9 +27,20 @@ const Footer = () => {
         {/* bottom with links */}
         <div className="flex flex-col gap-8">
 
-            {/* page links - css grid */}
+            {/* page links - css grid into 3 cols*/}
             <div className="grid grid-cols-3 gap-4">
-                <div>1</div>
+
+                {/* column 1 */}
+                <div className='flex flex-col gap-4 text-16'>
+                    <span className='text-primary font-bold'>Marketplace</span>
+                    <div className="flex flex-col gap-2">
+                        <Link href="/">Create</Link>
+                        <Link href="/">Mining</Link>
+                        <Link href="/">Selling</Link>
+                        <Link href="/">Collect</Link>
+                    </div>
+                </div>
+
                 <div>2</div>
                 <div>3</div>
             </div>
