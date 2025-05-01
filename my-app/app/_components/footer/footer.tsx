@@ -8,10 +8,10 @@ const Footer = () => {
     <div className='flex flex-col gap-5'>
 
         {/* logo and subscribe section */}
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between lg:justify-around">
             <Logo />
 
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-4 lg:gap-[250px]">
                 <span className='font-bold text-nowrap'>
                     Ready to collect?
                 </span>
@@ -31,7 +31,7 @@ const Footer = () => {
             <div className="grid grid-cols-3 gap-4">
 
                 {/* column 1 */}
-                <div className='flex flex-col gap-4 text-16'>
+                <div className='flex flex-col gap-4 text-16 lg:text-20'>
                     <span className='text-primary font-bold'>Marketplace</span>
                     <div className="flex flex-col gap-2">
                         <Link href="/">Create</Link>
@@ -60,6 +60,38 @@ const Footer = () => {
                         <Link href="/">Selling</Link>
                         <Link href="/">Collect</Link>
                     </div>
+                </div>              
+            </div>
+
+            {/* two lines and social icons */}
+            <div className="flex flex-col items-center text-center gap-5">
+                <div>
+                    <span className='text-16'>
+                        Create, sell and collect
+                    </span>
+                    <br />
+                    <span className='text-16 font-bold'>
+                        NFTs with us
+                    </span>
+                </div>
+
+                {/* social links */}
+                <div className=" flex items-center gap-4">
+                    <Link href="/">
+                        <img src="/images/social/facebook.png" alt="facebook" width={40} height={40} />
+                    </Link>
+
+                    <Link href="/">
+                        <img src="/images/social/insta.png" alt="insta" width={40} height={40} />
+                    </Link>
+
+                    <Link href="/"> 
+                        <img src="/images/social/linkedin.png" alt="linkedin" width={40} height={40} />
+                    </Link>
+
+                    <Link href="/">
+                        <img src="/images/social/x.png" alt="x" width={40} height={40} />
+                    </Link>
                 </div>
             </div>
         </div>
