@@ -20,6 +20,11 @@ const Footer = () => {
 
         </div>
 
+        {/* divider */}
+        <div className='h-[1px] bg-white/50 w-full' />
+
+        {/* bottom with links */}
+        
       
     </div>
   )
