@@ -2,6 +2,7 @@ import "./globals.css";
 import { Inria_Sans } from "next/font/google";
 import type { Metadata } from "next";
 import Header from "./_components/header/header";
+import Footer from "./_components/footer/footer";
 
 const inriaSans = Inria_Sans({
   variable: "--font-inria-sans",
@@ -25,6 +26,7 @@ export default function RootLayout({
         
         <Header />
         {children}
+        <Footer/>
       </body>
     </html>
   );
