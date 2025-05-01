@@ -54,6 +54,12 @@ const Footer = () => {
 
                 <div className='text-16 flex flex-col gap-4' >
                     <span className='text-primary font-bold'>Help</span>
+                    <div className="flex flex-col gap-2">
+                        <Link href="/">Create</Link>
+                        <Link href="/">Mining</Link>
+                        <Link href="/">Selling</Link>
+                        <Link href="/">Collect</Link>
+                    </div>
                 </div>
             </div>
         </div>
