@@ -1,12 +1,19 @@
 "use client";
 
 import React from 'react'
+import { ReactLenis } from 'lenis/react'
 
-const SmoothScrolling = () => {
+const SmoothScrolling = ( { children } : { children: React.ReactNode}) => {
   return (
-    <div>
-      
-    </div>
+    <ReactLenis
+      root
+      options={{
+        lerp:0.5,
+        duration: 0.5,
+      }}
+      >
+        {children}
+      </ReactLenis>
   )
 }
 
