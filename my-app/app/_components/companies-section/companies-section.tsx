@@ -20,7 +20,7 @@ const CompaniesSection = () => {
                 key={`${containerIndex}-${index}`}>
 
               <Image
-                src={`/images/companies/${index + 1}.png`}
+                src={`/images/companies/com-${index + 1}.png`}
                 alt={`Company ${index + 1}`}
                 height={150}
                 width={150}
