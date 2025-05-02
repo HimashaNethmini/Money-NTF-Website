@@ -17,7 +17,8 @@ const TopCollectionSection = () => {
 
       {/* collection list */}
       <div 
-        className="flex flex-col items-center justify-center gap-[10px] lg:mt-4 lg:flex-row lg:flex-wrap lg:gap-x-16 ">
+        className="flex flex-col items-center justify-center gap-[10px] 
+        lg:mt-4 lg:flex-col lg:flex-wrap lg:gap-x-16 ">
         
         {TOP_COLLECTION_DATA.map((item, index) => (
           <motion.div
@@ -30,7 +31,8 @@ const TopCollectionSection = () => {
               ease: "easeOut"
             }} //how much delay each element should have 
             key={index}
-            className="flex w-[100px] max-w-[320px] items-center gap-[8px] border-b-white/40 border-b py-[9px] lg:gap-[19px] lg:py-[28px]"
+            className="flex w-[100px] max-w-[320px] items-center gap-[8px] border-b-white/40 border-b py-[9px] 
+            lg:gap-[19px] lg:py-[28px] lg:w-full"
           >
             <span 
               className="text-16 font-bold lg:text-20">{index + 1}. </span>
