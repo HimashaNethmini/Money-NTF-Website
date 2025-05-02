@@ -37,7 +37,8 @@ const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
       )}
     >
       {/* all the links */}
-      <div className="flex flex-col gap-[25px] p-[20px] mt-[50px] text-[18px]">
+      <div 
+        className="flex flex-col gap-[25px] p-[20px] mt-[50px] text-[18px]">
         <Link href={"/"} className="hover:text-primary transition-colors">
           Explore
         </Link>
@@ -54,7 +55,8 @@ const Sidebar = ({ isOpen, setIsOpen }: SidebarProps) => {
           Support
         </Link>
 
-        <button className="bg-primary text-white px-[20px] py-[7px] rounded-full">
+        <button 
+          className="bg-primary text-white px-[20px] py-[7px] rounded-full">
           Connect Wallet
         </button>
       </div>

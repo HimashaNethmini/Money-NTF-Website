@@ -18,7 +18,8 @@ const Header = () => {
         </div>
 
         {/* menu for default screen-small*/}
-        <div className="hidden lg:flex gap-[25px] text-[18px]">
+        <div 
+          className="hidden lg:flex gap-[25px] text-[18px]">
           <Link href={"/"} className="hover:text-primary transition-colors">
             Explore
           </Link>
@@ -36,7 +37,8 @@ const Header = () => {
           </Link>
         </div>
 
-        <button className="bg-primary hidden lg:block text-white px-[20px] py-[7px] rounded-full">
+        <button 
+          className="bg-primary hidden lg:block text-white px-[20px] py-[7px] rounded-full">
           Connect Wallet
         </button>
       </div>
