@@ -29,7 +29,7 @@ export default function RootLayout({
         <Header />
 
         {/* blur effect on stats - lg screen */}
-        <div className="absolute hidden right-0 lg:block h-[400px] w-[400px] bg-white opacity-5 blur-3xl lg:top-[700px]" />
+        <div className="absolute hidden -right-0 lg:block h-[400px] w-[400px] bg-white opacity-5 blur-3xl lg:top-[700px]" />
         {children}
         <Footer/>
       </body>
