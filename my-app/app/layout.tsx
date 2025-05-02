@@ -24,6 +24,8 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inriaSans.variable} relative mx-auto box-border max-w-[1728px] px-[17px] py-[10px] antialiased lg:px-[100px] lg:py-[23px]`}>
         
+        {/* blur effect in lg screen - top screen */}
+        <div className="absolute hidden left-0 lg:block h-[400px] w-[400px] bg-white opacity-10 blur-3xl lg:top-[-100px]" />
         <Header />
         {children}
         <Footer/>
