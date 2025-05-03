@@ -1,4 +1,4 @@
-# Money-NTF-Website
+# Money-NFT-Website
 
 
 ![image1](https://github.com/user-attachments/assets/a76c2408-ced1-4dc9-9075-0952d3851a3b)
