@@ -7,7 +7,7 @@ const Logo = () => {
         Money
         <span 
           className='text-primary'>
-            NTF
+            NFT
         </span>
     </span>
   )

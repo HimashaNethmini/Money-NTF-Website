@@ -12,7 +12,7 @@ const HeroSection = () => {
       {/* slogan */}
       <div 
         className="text-center px-[10px]">
-        Money NTF is a platform that allows you to create and Sell.
+        Money NFT is a platform that allows you to create and Sell.
       </div>
 
       {/* hero title - make responsive for large screen (lg:text - refer tailwind.config.ts) */}
@@ -47,7 +47,7 @@ const HeroSection = () => {
         </div>
 
         {/* third line */}
-        <TextAnimation delay={1.1} divideBy="letter">Rare NTFs</TextAnimation>
+        <TextAnimation delay={1.1} divideBy="letter">Rare NFTs</TextAnimation>
       </div>
 
       {/* frame rotation */}

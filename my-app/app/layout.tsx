@@ -13,7 +13,7 @@ const inriaSans = Inria_Sans({
 
 export const metadata: Metadata = {
   title: "Money",
-  description: "Real time NTF website to increase money",
+  description: "Real time NFT website to increase money",
 };
 
 export default function RootLayout({
